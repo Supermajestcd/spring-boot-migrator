@@ -34,6 +34,7 @@ class State {
 }
 
 const state = new State();
+
 /*
 function runRecipe(element) {
     if (state.isRunningARecipe()) {
@@ -81,20 +82,37 @@ function applyRecipes(btn) {
             // mark red flashlights / play alarm sound
             console.log("Error while applying recipe: " + e)
         }
-    })
-        .done(function () {
-            // var section = $(`.run-a-recipe[recipe='${recipeName}']`)
-            $(`.run-a-recipe[recipe='${recipeName}']`).fadeOut( 1200, "linear", function() {
-                $(`.run-a-recipe[recipe='${recipeName}']`)
-                    .closest(".sect2")
-                    .remove();
-            });
+    }).done(function () {
+        // After applying recipe
+        var section = $(`.run-a-recipe[recipe='${recipeName}']`).closest(".sect2");
 
-        })
-        .always(function () {
-            state.completedRunningRecipe();
+        let sectionH3 = section.find("h3");
+        // find next h3
+        let nextH3 = section.parent().find("h3").has("a.anchor").slice(1);
+        let title = sectionH3.text();
+        // fade out section
+        section.fadeOut( 1000, "linear", function() {
+            // and remove section
+            section.remove();
         });
+        // fade out sidebar section
+        let sidebar = $("a:contains('" + title + "')").parent().remove()
+        sidebar.fadeOut( 1000, "linear", function() {
+            // and remove section
+            sidebar.remove();
+        });
+        scrollToAnchor(nextH3);
+    })
+    .always(function () {
+        state.completedRunningRecipe();
+    });
 }
+
+
+function scrollToAnchor(aid){
+    $('html,body').animate({scrollTop: aid.offset().top},'fast');
+}
+
 
 $( document ).ajaxStart(function() {
     $( ".log" ).text( "Triggered ajaxStart handler." );
@@ -103,7 +121,7 @@ $( document ).ajaxStart(function() {
 
 state.registerListeners(function () {
 
-    changeAllRecipesButtonState();
+    // changeAllRecipesButtonState();
     changeRecipeButtonState();
 })
 
@@ -111,7 +129,7 @@ function changeRecipeButtonState() {
 
     state.isRunningARecipe() ? runRecipeDisabledState() : runRecipeNormalState();
 }
-
+/*
 function changeAllRecipesButtonState() {
 
     $(".run-all-recipe").html(
@@ -133,9 +151,9 @@ const runAllRecipeInNormalState = '<button type="button" class="btn btn-primary"
     'onclick="applyRecipes()">' +
     'Run All Recipes' +
     '</button>';
-
+*/
 $(document).ready(function () {
-    $(".run-all-recipe").html(runAllRecipeInNormalState);
+    // $(".run-all-recipe").html(runAllRecipeInNormalState);
 
     runRecipeNormalState();
 });
