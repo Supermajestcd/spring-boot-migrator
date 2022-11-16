@@ -35,7 +35,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class UpgradeDepenenciesMigrationTest {
     @Test
-    void test_renameMe() {
+    void migrateEhCacheToSpringBoot3() {
         ProjectContext context = TestProjectContext.buildProjectContext()
                 .withSpringBootParentOf("2.7.5")
                 .withBuildFileHavingDependencies("org.ehcache:ehcache")
