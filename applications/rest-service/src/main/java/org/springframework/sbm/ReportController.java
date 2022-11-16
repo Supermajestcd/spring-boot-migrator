@@ -43,10 +43,16 @@ class ReportController{
 
     private final String REPORT_RECIPE = "sbu30-report";
 
+    private boolean isInitialReport = true;
+
     @GetMapping(path = "/spring-boot-upgrade", produces = MediaType.TEXT_HTML_VALUE)
     @ResponseBody
     public String upgrade() {
-        // applyCommand.execute(contextHolder.getProjectContext(), "boot-2.7-3.0-upgrade-report2");
+        // Urgh... that's nasty
+        if(!isInitialReport) {
+            applyCommand.execute(contextHolder.getProjectContext(), REPORT_RECIPE);
+        }
+        isInitialReport = false;
         return reportHolder.getReport();
     }
 
