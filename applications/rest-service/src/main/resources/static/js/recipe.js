@@ -161,7 +161,7 @@ $(document).ready(function () {
 const runRecipeNormalState = function () {
     $(".run-a-recipe").each(function () {
         const div = $(this);
-        div.html('<button type="button" class="btn btn-primary" id="recipeButton" ' +
+        div.html('<br><button type="button" class="btn btn-dark btn-sm" id="recipeButton" ' +
             'name="apply-recipe-button" recipe="' + div.attr('recipe') + '" ' +
             'onclick="applyRecipes(this)">' +
             'Run Recipe' +
@@ -172,7 +172,7 @@ const runRecipeNormalState = function () {
 const runRecipeDisabledState = function () {
     $(".run-a-recipe").each(function () {
         const div = $(this);
-        div.html('<button type="button" class="btn btn-primary" id="recipeButton" ' +
+        div.html('<br><button type="button" class="btn btn-dark btn-sm" id="recipeButton" ' +
             'name="apply-recipe-button" recipe="' + div.attr('recipe') + '" ' +
             'onclick="runRecipe(this)" disabled>' +
             'Run Recipe' +
