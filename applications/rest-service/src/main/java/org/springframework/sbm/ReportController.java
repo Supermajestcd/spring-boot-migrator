@@ -41,7 +41,7 @@ class ReportController{
     @Autowired
     private ProjectContextHolder contextHolder;
 
-    private final String REPORT_RECIPE = "sbu30-report";
+    public static final String REPORT_RECIPE = "sbu30-report";
 
     private boolean isInitialReport = true;
 
