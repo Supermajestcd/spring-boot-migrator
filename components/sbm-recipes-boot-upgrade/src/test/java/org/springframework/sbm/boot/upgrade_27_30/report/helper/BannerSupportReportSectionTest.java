@@ -56,8 +56,8 @@ public class BannerSupportReportSectionTest {
                                 ===== Remove image banner
                                 Remove these image banners\s
                                                         
-                                * `/Users/fkrueger/projects/spring-boot-migrator/components/sbm-recipes-boot-upgrade/target/dummy-test-path/src/main/resources/banner.gif`
-                                * `/Users/fkrueger/projects/spring-boot-migrator/components/sbm-recipes-boot-upgrade/target/dummy-test-path/src/main/resources/banner.jpg`
+                                * `<PATH>/src/main/resources/banner.gif`
+                                * `<PATH>/src/main/resources/banner.jpg`
                                                         
                                                         
                                                         
@@ -68,8 +68,8 @@ public class BannerSupportReportSectionTest {
                                 ===== Replace image banner
                                 Replace these banners\s
                                                         
-                                * `/Users/fkrueger/projects/spring-boot-migrator/components/sbm-recipes-boot-upgrade/target/dummy-test-path/src/main/resources/banner.gif`
-                                * `/Users/fkrueger/projects/spring-boot-migrator/components/sbm-recipes-boot-upgrade/target/dummy-test-path/src/main/resources/banner.jpg`
+                                * `<PATH>/src/main/resources/banner.gif`
+                                * `<PATH>/src/main/resources/banner.jpg`
                                                         
                                 with `banner.txt`
                                                 
