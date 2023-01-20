@@ -46,7 +46,7 @@
 		<java.version>7</java.version>
 		<spring.version>4.3.20</spring.version>
 		<tomcat.jdbc.version>7.0.35</tomcat.jdbc.version>
-		<commons.lang3.version>3.3</commons.lang3.version>
+		<commons.lang3.version>3.12.0</commons.lang3.version>
 		<h2.version>2.1.210</h2.version>
 		<mvn.main.class>it.dontesta.spring.example.main.MinimalSpringApp</mvn.main.class>
 	</properties>
