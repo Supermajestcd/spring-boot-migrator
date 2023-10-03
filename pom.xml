@@ -19,7 +19,7 @@
         <java.version>17</java.version>
         <spring-shell.version>2.1.2</spring-shell.version>
         <openrewrite.version>7.29.0</openrewrite.version>
-        <openrewrite.spring.version>4.26.0</openrewrite.spring.version>
+        <openrewrite.spring.version>5.0.11</openrewrite.spring.version>
         <rewrite-migrate-java.version>1.13.0</rewrite-migrate-java.version>
         <spring-boot.version>2.7.5</spring-boot.version>
         <progressbar.version>0.9.5</progressbar.version>
@@ -428,7 +428,7 @@
                 <configuration>
                     <properties>
                         <owner>the original author or authors.</owner>
-                        <email></email>
+                        <email/>
                         <year>2022</year>
                     </properties>
                     <licenseSets>
