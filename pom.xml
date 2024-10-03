@@ -25,7 +25,7 @@
         <progressbar.version>0.9.5</progressbar.version>
         <testcontainers.version>1.17.5</testcontainers.version>
         <maven-invoker.version>3.2.0</maven-invoker.version>
-        <shrinkwrap.resolvers.version>3.1.4</shrinkwrap.resolvers.version>
+        <shrinkwrap.resolvers.version>3.1.5</shrinkwrap.resolvers.version>
         <lombok.version>1.18.24</lombok.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.csvParser.outputEncoding>UTF-8</project.csvParser.outputEncoding>
@@ -428,7 +428,7 @@
                 <configuration>
                     <properties>
                         <owner>the original author or authors.</owner>
-                        <email></email>
+                        <email/>
                         <year>2022</year>
                     </properties>
                     <licenseSets>
